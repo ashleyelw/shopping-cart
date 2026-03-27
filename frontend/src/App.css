@@ -17,6 +17,17 @@
   }
 }
 
+.fruit container {
+  display: flex;
+}
+
+.fruit div {
+  width: 100px;
+  height: 100px;
+  background-color: #8cac;
+  margin: 10px;
+}
+
 .hero {
   position: relative;
 

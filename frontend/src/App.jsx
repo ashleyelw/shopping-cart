@@ -1,9 +1,27 @@
+import './App.css';
+
 function App() {
   return (
-      <div className="App">
-          <h1>Hello World!</h1>
-          <p>This is a simple React application.</p>
+    <>
+      <div>
+          <div className="App">
+              <h1>Shopping Cart</h1>
+              <div className="flex-container">
+                  <div className="product-list">
+                      <h2>Products</h2>
+                      {/* Product items will go here */}
+                  </div>
+              </div>
+          </div>
+          
+          <p> Choose a fruit: </p>
+            <div class="fruit">
+              <div>Apple</div>
+              <div>Banana</div>
+              <div>Cherry</div>
+            </div>
       </div>
+    </>
   );
 }
 
