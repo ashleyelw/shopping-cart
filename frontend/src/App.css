@@ -17,14 +17,43 @@
   }
 }
 
-.fruit container {
+.grid-container {
+  display: grid;
+  grid-template-rows: 150px  150px 150px;
+  grid-template-columns: auto auto auto;
+}
+
+
+.fruit {
   display: flex;
 }
 
 .fruit div {
   width: 100px;
   height: 100px;
-  background-color: #8cac;
+  background-color: rgba(182, 245, 255, 0.8);
+  margin: 10px;
+}
+
+.vegetable {
+  display: flex;
+}
+
+.vegetable div {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(194, 250, 255, 0.8);
+  margin: 10px;
+}
+
+.dairy {
+  display: flex;
+}
+
+.dairy div {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(188, 245, 255, 0.8);
   margin: 10px;
 }
 
