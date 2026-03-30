@@ -33,6 +33,11 @@ function App() {
 
     <div class="add to-cart">
       <button>Add to Cart</button>
+    </div>
+      <div class="increment-decrement">
+      <button>+</button>
+      <button>-</button>
+  
       <button>Add to Cart</button>
       <button>Add to Cart</button>
       <button>Add to Cart</button>
@@ -48,6 +53,7 @@ function App() {
       <div>Spinach</div>
     </div>
 
+    
 
     <h2>Dairy</h2>
      <div class="dairy">
@@ -61,11 +67,18 @@ function App() {
       <button>Add to Cart</button>
     </div>
   
-  <h2>Snacks</h2>
+  <h2>Fruit</h2>
     <div class="grid-container">
       <div class="item1">1</div>
+        <img src="https://png.pngtree.com/png-vector/20231226/ourmid/pngtree-big-apple-png-image_11383442.png"/>
       <div class="item2">2</div>
-      <div class="item3">3</div>  
+      <div class="item3">3</div>
+    </div>
+
+    <div class="image-container">
+      <img src="https://png.pngtree.com/png-vector/20231226/ourmid/pngtree-big-apple-png-image_11383442.png" alt="Snack 1" class = "apple"/>
+      <img src="https://png.pngtree.com/png-clipart/20250111/original/pngtree-lychee-fruit-fresh-tropical-flavor-png-image_20017264.png" alt="Snack 2" class = "apple"/>
+      <img src="https://png.pngtree.com/png-vector/20231226/ourmid/pngtree-big-apple-png-image_11383442.png" alt="Snack 3" class = "apple"/>
     </div>
 
     </>
