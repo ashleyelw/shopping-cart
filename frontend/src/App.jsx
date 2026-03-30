@@ -19,8 +19,26 @@ function App() {
     <h2>Fruits</h2> 
       <div class="fruit">
       <div>Apple</div>
-      <div>Banana</div>
-      <div>Cherry</div>
+      <div>Peach</div>
+      <div>Lychee</div>
+      <div>Grapes</div>
+      <div>Mandarin</div>
+      <div>Strawberry</div>
+    </div>
+
+    <div class="increment-decrement">
+      <button>+</button>
+      <button>-</button>
+    </div>
+
+    <div class="add to-cart">
+      <button>Add to Cart</button>
+      <button>Add to Cart</button>
+      <button>Add to Cart</button>
+      <button>Add to Cart</button>
+      <button>Add to Cart</button>
+      <button>Add to Cart</button>
+
     </div>
 
     <h2> Vegetables</h2>
@@ -38,7 +56,12 @@ function App() {
       <div>Yogurt</div>
     </div>
     </div>
+
+    <div class="add to-cart">
+      <button>Add to Cart</button>
+    </div>
   
+  <h2>Snacks</h2>
     <div class="grid-container">
       <div class="item1">1</div>
       <div class="item2">2</div>
