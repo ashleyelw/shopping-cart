@@ -68,17 +68,14 @@ function App() {
     </div>
   
   <h2>Fruit</h2>
-    <div class="grid-container">
-      <div class="item1">1</div>
-        <img src="https://png.pngtree.com/png-vector/20231226/ourmid/pngtree-big-apple-png-image_11383442.png"/>
-      <div class="item2">2</div>
-      <div class="item3">3</div>
-    </div>
-
     <div class="image-container">
       <img src="https://png.pngtree.com/png-vector/20231226/ourmid/pngtree-big-apple-png-image_11383442.png" alt="Snack 1" class = "apple"/>
       <img src="https://png.pngtree.com/png-clipart/20250111/original/pngtree-lychee-fruit-fresh-tropical-flavor-png-image_20017264.png" alt="Snack 2" class = "apple"/>
       <img src="https://png.pngtree.com/png-vector/20231226/ourmid/pngtree-big-apple-png-image_11383442.png" alt="Snack 3" class = "apple"/>
+    </div>
+    
+   <div class="add to-cart">
+      <button>Add to Cart</button>
     </div>
 
     </>
