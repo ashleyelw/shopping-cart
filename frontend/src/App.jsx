@@ -1,11 +1,45 @@
+import { useState, useEffect, useRef } from 'react';
 import './App.css';
 
+const API_BASE_URL = 'http://127.0.0.1:8000/products';
+
 function App() {
+  const [products, setProducts] = useState([]);
+  const inputRef = useRef(null);
+
+  //fetch products from backend
+  const fetchProducts = async () => {
+    try {
+      const response = await fetch(API_BASE_URL);
+      const data = await response.json();
+      setProducts(data);
+    } catch (error) {
+      console.error('Error fetching products:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchProducts();
+    inputRef.current?.focus();
+  }, []);
+
   return (
     <>
       <div>
           <div className="App">
               <h1>Shopping Cart</h1>
+
+            <div className="product-list">
+              <h2>Browse Products</h2>
+              {products.map((product) => (
+                  <div key={product.id} className="product-item">
+                      <h3>{product.name}</h3>
+                      <p>Price: ${product.price}</p>
+                      <button>Add to Cart</button>
+                  </div>
+              ))}
+          </div>
+
               <div className="flex-container">
                   <div className="product-list">
                       <h2>Products</h2>
