@@ -72,7 +72,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Shopping Cart</h1>
+      <h1>Mini Grocery</h1>
       <h2>Browse Products</h2>
 
       <button className="view-cart" onClick={() => setShowCart(true)}>
