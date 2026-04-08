@@ -1,19 +1,12 @@
 from fastapi import FastAPI
-import pymysql
+from crud import Product, get_all_products, create_product
 
 app = FastAPI()
 
 @app.get("/products")
-def get_products():
-    return products
+def read_products():
+    return get_all_products()
 
-with pymysql.connect(
-    host="localhost",
-    user="root",
-    password="root",
-    database="shoppingcartdb",
-) as connection:
-    with connection.cursor() as cursor:
-        cursor.execute("SELECT * FROM products")
-        products = cursor.fetchall()
-        print(products)
+@app.post("/products")
+def add_product(product: Product):
+    return create_product(product)
