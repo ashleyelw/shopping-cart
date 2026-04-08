@@ -1,4 +1,4 @@
-from sqlmodel import Field, SQLModel, Session, create_engine, select
+from sqlmodel import Field, SQLModel, Session, create_engine, select, or_
 from typing import Optional
 
 #establish connection to database
@@ -24,6 +24,8 @@ def create_product(new_product: Product):
     with Session (engine) as session:
         session.add(new_product)
         session.commit()
+        session.refresh(new_product)
+        return new_product
 
 #read
 def get_all_products() -> list[Product]:
@@ -36,12 +38,15 @@ def get_product_by_id(product_id: int) -> Product | None:
         product = session.get(Product, product_id)
         return product
     
-def get_product_by_name(product_name: str) -> Product | None:
+def get_product_by_id_and_name(product_id: int, product_name: str) -> Product | None:
     with Session(engine) as session:
         product = session.exec(
-            select(Product).where(Product.name == product_name),
-            len(product.description) == 0
-        )
+            select(Product).where(
+                or_(Product.id == product_id, Product.name == product_name),
+                len(product.description) == 0
+            )
+        ).first()
+        return product
     
 #update
 def update_product(product_id: int, updated_product: Product) -> Product | None:
